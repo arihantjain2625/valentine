@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Card</title>
+    <style>
+        html,
+        body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(https://assets.codepen.io/4927073/Group2.png), url(https://assets.codepen.io/4927073/Background6.png);
+            background-image: url(https://assets.codepen.io/4927073/Group2.png), linear-gradient(33deg, #4e7398, #9a3d5c);
+            background-image: url(https://assets.codepen.io/4927073/Group2.png), linear-gradient(33deg, #b5529c, #5933cd);
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+        .envelope {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .love-letter-button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #9a3d5c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .love-letter-button:hover {
+            background-color: #7a304c;
+        }
+
+        .card {
+            position: relative;
+            width: 262px;
+            height: 372px;
+            margin-top: 120px; /* Adjust as needed */
+            box-shadow: inset 5px 0px 15px 0px rgba(0, 0, 0, 0.1),
+                3px 0px 3px -2px rgba(0, 0, 0, 0.3);
+            background-color: #f8f8e1;
+            transform: scale(1.05);
+        }
+
+        .front {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #e0e0db;
+            backface-visibility: hidden;
+            background-color: #e8e6e3;
+            background-size: contain;
+            transform-style: preserve-3d;
+            transform-origin: 0% 50%;
+            transform: perspective(800px) rotateY(0deg);
+            transition: all 1s ease-in-out;
+            filter: saturate(1.125) brightness(1.0125);
+        }
+
+        .card:hover .front {
+            transform: perspective(800px) rotateY(-170deg);
+            background-color: rgb(205, 205, 205);
+        }
+
+        .card:hover .back {
+            transform: perspective(800px) rotateY(-170deg);
+            box-shadow: 7px 0px 2px 0px rgba(0, 0, 0, 0.3),
+                inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+            background-color: #fffffa;
+        }
+
+        .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: visible;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+            box-shadow: inset 5px 0px 15px 0px rgba(0, 0, 0, 0.1),
+                3px 0px 3px 1px rgba(0, 0, 0, 0.3);
+            transform-style: preserve-3d;
+            transform-origin: 0% 50%;
+            transform: perspective(800px) rotateY(0deg);
+            transition: all 1s ease-in-out;
+            background-color: #fff;
+        }
+
+        .text-container {
+            width: 80%;
+            height: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Roboto;
+            color: #929292;
+        }
+
+        .f-box {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .f-box img {
+            height: 100%;
+            width: auto;
+        }
+
+        p {
+            color: #8a2c2c;
+        }
+
+        b {
+            font-size: 31px;
+        }
+
+        @media (max-width: 675px) {
+            .card {
+                height: 330px;
+                width: 230px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="envelope">
+        <!-- Remove the text over the button -->
+        
+    </div>
+    <!-- New button for the love letter -->
+    <a href="love_letter.html" class="love-letter-button">Read Love Letter</a>
+
+</div>
+
+<div class="container">
+    <div class="card">
+        <div class="back"></div>
+        <div class="front">
+            <div class="f-box">
+                <img src="https://assets.codepen.io/4927073/ValCard.png" alt="">
+            </div>
+        </div>
+
+        <div class="text-container">
+            <p>Happy Valentine's day <b>bharti..&hearts;</b></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
